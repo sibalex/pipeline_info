@@ -1,5 +1,11 @@
 # pipeline_info
 
+>Полезные ссылки
+>
+>Список инструментов для workflows и pipelining'а: awesome-pipeline
+>
+>Статья Jeremy Leipzig "A review of bioinformatic pipeline frameworks" в Briefings in Bioinformatics
+
 Origin https://github.com/pditommaso/awesome-pipeline
 
 A curated list of awesome pipeline toolkits inspired by [Awesome Sysadmin](https://github.com/kahun/awesome-sysadmin)
