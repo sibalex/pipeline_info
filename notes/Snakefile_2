@@ -1,0 +1,130 @@
+#Snakefile
+rule count_words:
+    input:
+        "input/input"
+    output:
+        "output/output"
+    shell:
+        "cat {input} | wc -w > {output}"
+
+
+#Snakefile
+rule all:
+    input: "input/input"
+    output: "output/output"
+    shell: "cat {input} | wc -w > {output}"
+
+
+#Snakefile
+rule count_words:
+    input: "input/input"
+    output: "output/output"
+    run:
+        with open(input[0], 'r') as input_file, open(output[0], 'w') as out_file:
+            for line in input_file:
+                out_file.write(str(len(set(line.split(' ')))))
+
+
+#Snakefile
+rule count_word:
+  input: "input/input"
+  output: "output/output"
+  shell: "wc -w {input} | cut -d' ' -f1 > {output}"
+
+
+#Snakefile
+cat Snakefile 
+rule all:
+    input: "output/output"
+
+rule calculate:
+    input: "input/input"
+    output: "output/output"
+    shell: "wc -w < {input} > {output}"
+
+
+#Snakefile
+rule all:
+  input: "input/input"
+  output: "output/output"
+  shell: "cat {input} | wc -w > {output}"
+
+
+#Snakefile
+rule all:
+    input: "input/input"
+    output: "output/output"
+    run:
+        with open(input[0]) as fin, open(output[0], "w") as fout:
+            print(len(fin.read().split()), file=fout)
+
+
+
+#Snakefile
+rule all:
+    input: "input/input"
+    output: "output/output"
+    shell: "python3 script.py {input} > {output}"
+
+#script.py
+import sys
+num_words = 0
+with open(sys.argv[1], 'r') as f:
+    for line in f:
+        words = line.split()
+        num_words += len(words)
+print(num_words)
+
+
+
+#Snakefile
+rule count:
+  input: "input/input"
+  output: "output/output"
+  shell: " cat {input} | wc -w > {output}"
+
+
+
+
+#
+rule all:
+    input:
+        "input/input"
+    output:
+        "output/output"
+    run:
+        out = open(output[0],'a')
+        line = open(input[0],'r').readline()
+        out.write(str(len(line.split())))
+        out.close()
+
+
+#
+rule all:
+  input: "input/input"
+  output: "output/output"
+  shell: "wc -w < {input} > {output}"
+
+
+
+# or
+
+# Snakefile
+rule Snakemake:
+	input: 
+		"input/input"
+	output:
+		"output/output"
+#	shell:
+#		"wc -w {input} | cut -d' ' -f1 > {output}"
+	script:
+		"./scr.py"
+
+--
+calc = 0
+for i in open('./input/input', "r"):
+  	calc += len(i.split(" "))
+
+out = open('./output/output', "w")
+out.write(f'{calc}')
+out.close()
