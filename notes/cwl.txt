@@ -1,0 +1,6 @@
+    Сайт -  Common Workflow Language (http://www.commonwl.org/)
+    Проект на GitHub (https://github.com/common-workflow-language/common-workflow-language)
+    Спецификация - Common Workflow Language Specifications, v1.0 (http://www.commonwl.org/v1.0/)
+    Руководство пользователя - A Gentle Introduction to the Common Workflow Language (http://www.commonwl.org/v1.0/UserGuide.html)
+    Спецификация для написания CWL оберток для программ -  Command Line Tool Description Specification (http://www.commonwl.org/v1.0/CommandLineTool.html)
+    Спецификация для написания пайплайнов Workflow Description Specification (http://www.commonwl.org/v1.0/Workflow.html)
