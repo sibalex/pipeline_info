@@ -3,7 +3,7 @@
 # 
 # Copyleft (c) by Alexander Sibagatov 2020.
 # -------------------------------------------
-name: My-GitHub-Basics
+name: My-GitHub-Actions
 env:
   APPLICATION_NAME    : "MyFlask"
   DEPLOY_PACKAGE_NAME : "flask-deploy--ver-${{ github.sha }}"
