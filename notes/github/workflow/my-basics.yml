@@ -1,4 +1,4 @@
-# GitHub actions test 1
+# GitHub actions Test
 
 name: My-GitHub-Basics
 
@@ -8,15 +8,26 @@ on:
       - master
 
 jobs:
-  build:
+  my_testing:
+    runs-on: ubuntu-latest
     
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Run a one-line script
+#       run: echo Hello, world!
+#     - name: Run a multi-line script
+#       run: |
+#         echo Add other actions to build,
+#         echo test, and deploy your project.
+
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World from Testing job"
+
+
+  my_deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Print Hello Message
+      run: echo "Hello World from Deploy job"
