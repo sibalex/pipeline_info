@@ -50,7 +50,7 @@ jobs:
     
     - name: Print env vars
       run: | 
-        echo "VAR1: ${{ my_deploy.env.VAR1 }}"
+        echo "VAR1: ${{ env.VAR1 }}"
         echo "VAR2: ${{ env.VAR2 }}"
         echo "VAR3: $LOCAL_VAR"
       env:
