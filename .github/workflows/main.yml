@@ -1,0 +1,27 @@
+# -------------------------------------------
+# GitHub Actions Part: Test-1
+# 
+# Copyleft (c) by Alexander Sibagatov 2020.
+# -------------------------------------------
+name: My-GitHub-Basics
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World from Testing job"
+
+
+  my_deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World from Deploy job"
