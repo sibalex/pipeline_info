@@ -1,5 +1,8 @@
 # pipeline_info
 
+Status of Last Deployment:<br>
+<img src="https://github.com/sibalex/pipeline_info/workflows/My-GitHub-Basics/badge.svg?branch=master"><br>
+
 
 Полезные ссылки:
 * Список инструментов для workflows и pipelining'а: awesome-pipeline
